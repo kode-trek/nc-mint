@@ -1,0 +1,9 @@
+deb
+https://askubuntu.com/questions/199557/how-can-i-include-a-custom-command-in-deb-file-to-be-executed-at-the-end-of-ins
+https://www.leaseweb.com/labs/2013/06/creating-custom-debian-packages/
+
+sudo dpkg -r virtualbox- + ver
+sudo apt-get autoremove virtualbox- + ver + --purge;
+sudo dpkg -i virtualbox-6.0_6.0.10-132072~Ubuntu~xenial_amd64.deb --verify
+sudo apt-get install -f
+sudo gdebi -n ~/Downloads/virtualbox-6.0_6.0.22-137980~Ubuntu~xenial_amd64.deb

@@ -1,0 +1,40 @@
+vbox
+   30  gdebi virtualbox-6.1_6.1.18-142142~Ubuntu~eoan_amd64.deb 
+   31  sudo gdebr virtualbox-6.1_6.1.18-142142~Ubuntu~eoan_amd64.deb 
+   32  sudo gdebi --remove virtualbox-6.1_6.1.18-142142~Ubuntu~eoan_amd64.deb 
+   33  sudo gdebi -r virtualbox-6.1_6.1.18-142142~Ubuntu~eoan_amd64.deb 
+
+
+#------------------------------------------------------------------------------
+VIRTUALBOX_MIN_VERSION=4.1
+VIRTUALBOX_MATCH_REGEX="^(4\.[1-9].*)|([5-9]\..*)|([1-9]([0-9])+\..*)" # 4.1+ , 5+
+#------------------------------------------------------------------------------
+
+
+_detect_virtualbox() {
+    local vboxmanage
+    local version
+
+    _log -n "Trying to find VirtualBox toolset"
+
+    # Locate VBoxManage tool
+    vboxmanage=$(which VBoxManage 2> /dev/null)
+    if [ $? -ne 0 -o -z "$vboxmanage" ]; then
+        _log "WARNING (Virtualbox was not found in you PATH. Please install it manually)"
+        return 0
+    fi
+
+    # Detect VirtualBox version
+    version=$($vboxmanage --version 2> /dev/null | tail -n 1)
+    [ $? -ne 0 ] && return 1
+
+    if [[ ! "$version" =~ $VIRTUALBOX_MATCH_REGEX ]]; then
+        _log "WARNING (Invalid version of VirtualBox [$version]. We need at least $VIRTUALBOX_MIN_VERSION)"
+        return 0
+    fi
+
+    # Version Ok
+    _log "OK (Valid version of VirtualBox found: $version)"
+    return 0
+}
+

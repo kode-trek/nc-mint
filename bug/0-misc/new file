@@ -1,0 +1,109 @@
+
+/bin/bash
+
+echo "-- NC-MATE --"
+
+lab51cc 1>/dev/null 2>/dev/null
+if [[ "$?" > 0 ]]
+then
+	echo "[dependency] <lab51cc>"
+	echo "[contact] <github.com/c-dyane>"
+    read -n1 -r -p "press any key to EXIT..." key
+	exit
+fi
+
+if [[ -e /usr/bin/nc-mate ]]
+then
+	echo "[WARNING] an application with similar name found: /usr/bin/nc-mate"
+	read -p "Continue? (Y/N): " confirm && [[ $confirm == [yY] ]] || exit 1
+fi
+
+
+sudo apt-get install -f -y
+sudo apt-get update -y
+sudo apt-get install software-properties-common -y
+sudo apt-get install xsel -y
+sudo apt-get install git -y
+sudo apt-get install p7zip-rar -y
+sudo apt-get install remmina remmina-plugin-vnc remmina-plugin-rdp -y
+sudo apt-get install tree -y
+sudo apt-get install xchm -y
+sudo apt-get install mkisofs -y
+
+sudo rm /usr/bin/nc-mate
+sudo rm -r /usr/lib/nc-mate-bin/
+sudo rm -r /usr/lib/nc-mate-lib/
+sudo mkdir /usr/lib/nc-mate-bin/
+sudo mkdir /usr/lib/nc-mate-lib/
+
+lab51cc lib/2dy/main_2dy.cc
+sudo mv main_2dy_* /usr/lib/nc-mate-bin/2dy
+
+lab51cc lib/abox/main_abox.cc
+sudo mv main_abox_* /usr/lib/nc-mate-bin/abox
+
+lab51cc lib/app/main_app.cc
+sudo mv main_app_* /usr/lib/nc-mate-bin/app
+
+lab51cc lib/cdup/main_cdup.cc
+sudo mv main_cdup_* /usr/lib/nc-mate-bin/cdup
+
+lab51cc lib/xcb/main_xcb.cc
+sudo mv main_xcb_* /usr/lib/nc-mate-bin/xcb
+
+lab51cc lib/dbox/main_dbox.cc
+sudo mv main_dbox_* /usr/lib/nc-mate-bin/dbox
+
+lab51cc lib/deb/main_deb.cc
+sudo mv main_deb_* /usr/lib/nc-mate-bin/deb
+
+lab51cc lib/dns/main_dns.cc
+sudo mv main_dns_* /usr/lib/nc-mate-bin/dns
+
+lab51cc lib/ena/main_ena.cc
+sudo mv main_ena_* /usr/lib/nc-mate-bin/ena
+
+lab51cc lib/ff/main_ff.cc
+sudo mv main_ff_* /usr/lib/nc-mate-bin/ff
+
+lab51cc lib/hi/main_hi.cc
+sudo mv main_hi_* /usr/lib/nc-mate-bin/hi
+
+lab51cc lib/job/main_job.cc
+sudo mv main_job_* /usr/lib/nc-mate-bin/job
+
+lab51cc lib/shh/main_shh.cc
+sudo mv main_shh_* /usr/lib/nc-mate-bin/shh
+
+lab51cc lib/snf/main_snf.cc
+sudo mv main_snf_* /usr/lib/nc-mate-bin/snf
+
+lab51cc lib/usb/main_usb.cc
+sudo mv main_usb_* /usr/lib/nc-mate-bin/usb
+
+lab51cc lib/vbox/main_vbox.cc
+sudo mv main_vbox_* /usr/lib/nc-mate-bin/vbox
+
+lab51cc lib/wifi/main_wifi.cc
+sudo mv main_wifi_* /usr/lib/nc-mate-bin/wifi
+
+lab51cc lib/wine/main_wine.cc
+sudo mv main_wine_* /usr/lib/nc-mate-bin/wine
+
+lab51cc lib/zpr/main_zpr.cc
+sudo mv main_zpr_* /usr/lib/nc-mate-bin/zpr
+
+lab51cc lib/help.cc
+sudo mv help_* /usr/lib/nc-mate-bin/help
+
+lab51cc lib/menu.cc
+sudo mv menu_* /usr/lib/nc-mate-bin/menu
+
+lab51cc lib/intro.cc
+sudo mv intro_* /usr/lib/nc-mate-bin/intro
+
+sudo cp lib/nc-mate /usr/bin
+sudo cp -rf lib/0_asset /usr/lib/nc-mate-lib/asset
+
+read -n1 -r -p "press any key to EXIT..." key
+

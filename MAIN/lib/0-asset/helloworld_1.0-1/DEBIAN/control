@@ -1,0 +1,11 @@
+Package: hello-world
+Version: 1.0-1
+Maintainer: github.com/kode-trek
+Section: base
+Priority: optional
+Architecture: amd64
+Depends: list-of-required, comma-separated, packages-from-APT,
+ or-just-leave-it-empty
+Description: hello-world
+ echos 'hello, world!'
+ -displays "hello, world!" on screen.

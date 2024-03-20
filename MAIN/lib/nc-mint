@@ -1,0 +1,116 @@
+#! /bin/bash
+
+# The MIT License (MIT)
+# Copyright (c) 2024 Emeer Adhamian (github.com/kode-trek)
+# https://raw.githubusercontent.com/kode-trek/nc-mint/main/LICENSE
+
+# 2dy
+if [[ "$1" == "2dy" ]]
+then
+ /usr/lib/nc-mint-bin/2dy "$2" "$3" "$4"
+ exit
+fi
+# abox
+if [[ "$1" == "abox" ]]
+then
+ /usr/lib/nc-mint-bin/abox "$2" "$3" "$4"
+ exit
+fi
+# cdup
+#if [[ "$1" == "cdup" ]]
+#then
+# /usr/lib/nc-mint-bin/cdup "$2" "$3"
+# exit
+#fi
+# deb
+#if [[ "$1" == "deb" ]]
+#then
+# /usr/lib/nc-mint-bin/deb "$2" "$3" "$4"
+# exit
+#fi
+# dns
+#if [[ "$1" == "dns" ]]
+#then
+# /usr/lib/nc-mint-bin/dns "$2" "$3"
+# exit
+#fi
+# ena
+#if [[ "$1" == "ena" ]]
+#then
+# /usr/lib/nc-mint-bin/ena "$2" "$3" "$4"
+# exit
+#fi
+# ff
+if [[ "$1" == "ff" ]]
+then
+ /usr/lib/nc-mint-bin/ff "$2" "$3" "$4"
+ exit
+fi
+# hi
+if [[ "$1" == "hi" ]]
+then
+ /usr/lib/nc-mint-bin/hi "$2"
+ exit
+fi
+# job
+if [[ "$1" == "job" ]]
+then
+ /usr/lib/nc-mint-bin/job "$2" "$3" "$4"
+ exit
+fi
+# shh
+if [[ "$1" == "shh" ]]
+then
+ /usr/lib/nc-mint-bin/shh "$2" "$3"
+ exit
+fi
+# snf
+if [[ "$1" == "snf" ]]
+then
+ /usr/lib/nc-mint-bin/snf "$2" "$3" "$4" "$5"
+ exit
+fi
+# usb
+if [[ "$1" == "usb" ]]
+then
+ /usr/lib/nc-mint-bin/usb "$2" "$3" "$4" "$5"
+ exit
+fi
+# vbox
+#if [[ "$1" == "vbox" ]]
+#then
+# /usr/lib/nc-mint-bin/vbox "$2" "$3" "$4"
+# exit
+#fi
+# wifi
+if [[ "$1" == "wifi" ]]
+then
+ /usr/lib/nc-mint-bin/wifi "$2" "$3" "$4" "$5"
+ exit
+fi
+# xcb
+if [[ "$1" == "xcb" ]]
+then
+ /usr/lib/nc-mint-bin/xcb "$2" "$3"
+ exit
+fi
+# zpr
+if [[ "$1" == "zpr" ]]
+then
+ /usr/lib/nc-mint-bin/zpr "$2" "$3" "$4" "$5" "$6"
+ exit
+fi
+# help
+if [[ "$1" == "--help" ]]
+then
+ /usr/lib/nc-mint-bin/help
+ exit
+fi
+# menu
+if [[ "$1" == "cmd" ]]
+then
+ /usr/lib/nc-mint-bin/menu
+ exit
+fi
+# intro
+/usr/lib/nc-mint-bin/intro

@@ -1,0 +1,6 @@
+https://addons.mozilla.org/en-US/firefox/addon/dark-background-light-text/
+https://askubuntu.com/questions/73474/how-to-install-firefox-addon-from-command-line-in-scripts
+
+tar -xf firefox-latest.tar.bz2 -D test
+tar -xf firefox-latest.tar.bz2 -C test
+tar -xf firefox-latest.tar.bz2 -C /

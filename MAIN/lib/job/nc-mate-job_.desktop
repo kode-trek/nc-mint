@@ -1,0 +1,8 @@
+[Desktop Entry]
+Type=Application
+Name=nc-mint-job
+Exec=/home/ID/Documents/nc-mint-job
+Icon=
+Comment=
+X-GNOME-Autostart-enabled=true
+Name[en_US]=nc-mint-job.desktop

@@ -1,0 +1,13 @@
+#!/bin/bash
+if [[ "$1" == '--help' ]]
+then
+	echo 'pattern: wyfy <connect | forget>'
+elif [[ "$1" == 'connect' ]]
+then
+	python connect.py
+elif [[ "$1" == 'forget' ]]
+then
+	python forget.py
+else
+	echo '[FAILED] invalid arg(s) supplied!'
+fi

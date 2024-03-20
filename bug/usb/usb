@@ -1,0 +1,143 @@
+sudo mkdosfs -F 32 -I /dev/sdb
+
+
+
+//		"[PATTERN] nc-mate usb --fat32 <file | dir>""\n"
+//		"prepares file(s) (in terms of size) for transfering to/from FAT32 "
+//		"file-system.""\n"
+//		"if [dir] integrates chunked file(s) within <dir> into one whole.""\n"
+//		"if [file] splits large-<file> (more than 4GB) into smaller chunks.""\n"
+
+//		"[PATTERN] nc-mate usb --udf <open | close>""\n"
+//		"(un-)mounts CD/DVD disk.""\n"
+//		"if [open] mounts optical disk </dev/sr0> to </cdrom>.""\n"
+//		"if [close] un-mounts optical disk from </cdrom>."
+
+//  v3 + "nc-mate usb --file <file | dir>""\n"
+//  "displays properties (absolute-path, file-type, size) of <file | dir>.""\n" +
+
+  v3 + "nc-mate usb --fat32 <file | dir>""\n"
+  "hints for transfering <file>(s) to/from FAT32 file-system.""\n" +
+
+// string cmd10 = "sudo mkdosfs -F 32 -I /dev/" + v2;
+// string cmd10 = "sudo mkdosfs -F 32 -n 'PENDRIVE_FAT32_" + ts() + "' -I /dev/" + v2;
+// string cmd10 = "sudo mkfs.vfat -F 32 -n 'PENDRIVE_FAT32_" + ts() + "' -I /dev/" + v2;
+
+// mkisofs -o [filename.iso] [directory_path]
+// string cmd10 = "sudo isoinfo -l -i " + quote(v3) + ".iso";
+ // OBSOLETED CD/DVD-ROM
+// "sudo mkdir /cdrom/" + quote(v3);
+// "sudo mount -o loop /dev/" + quote(v2) + " /cdrom/" + quote(v3);
+// ls testiso
+// ls /boot
+// "sudo mount -t udf /dev/sr0 /cdrom";
+// "sudo umount /cdrom";
+
+
+//	string cmd7 = (string) "file --mime-type " + quote(inp);
+////	string cmd7 = (string) "file -b --mime-type " + quote(inp) +
+////	R"( | sed 's|/.*||')";	//is_binary?
+
+// "sudo mkdosfs -F 32 -n 'PENDRIVE_FAT32_" + ts() + "' -I /dev/" + v2;
+//// "sudo mkfs.vfat -F 32 -n 'PENDRIVE_FAT32_" + ts() + "' -I /dev/" + v2;
+
+
+//	if (op == "--ext4") {
+//		if (dir(inp)) {
+//			vector<string> lst = tree(inp, false);
+//			for (int i = 0; i < lst.size(); i++) sys(cmd7);
+//			cout << endl;
+//		}
+//		if (not dir(inp)) {sys(cmd7); cout << endl;}
+//		disp(msg2);
+//		c = sys(cmd8 + " 1>/dev/null 2>/dev/null");
+//		if (c) {cout << "\n""[FAILED] " << cmd8 << endl; exit(1);}
+//		c = sys(cmd9 + " 1>/dev/null 2>/dev/null");
+//		if (c) {cout << "\n""[FAILED] " << cmd9 << endl; exit(1);}
+//		cout << "DONE." << endl;
+//		cout << endl;
+//		cout <<
+//		"[permission-mode]""\n"
+//		"directory       775""\n"
+//		"regular-file    664""\n"
+//		"application     755"
+//		<< endl;
+//	}
+
+//	if (op == "--fat32") {
+//		cout <<
+//		"[...] prepares file(s) (in terms of size) for transfering to/from FAT32 "
+//		"file-system.""\n"
+//		<< endl;
+//		if (dir(inp)) {
+////		4,000,000,000
+//			if (fsize(inp) < 4000000000) {
+//				cout <<
+//				"file(s) within" << quote(inp) << " are already prepared for FAT32."
+//				<< endl;
+//			}
+//			cout <<
+//			"[...] integrates file(s) within " << quote(inp) <<
+//			" into one whole file.""\n"
+//			"[] cat " << quote(inp) << "/* > summed_" << ts() << ".FAT32"
+//			<< endl;
+//		}
+////		4,000,000,000
+//		if (fsize(inp) >= 4000000000) {
+//			cout <<
+//			"[...] splits large (more than 4GiB) file " << quote(inp) <<
+//			" into smaller 1GB chunks.""\n"
+//			"[] creates directory " << quote(t_dir) << "\n"
+//			"[] split --bytes=1024m " << quote(inp) << " " << quote(t_dir)
+//			<< endl;
+//		}
+//		cout << "[...] file (<4GB) is already prepared for FAT32." << endl;
+//	}
+
+// if (op == "--udf") {
+//  if (v1 == "open") {
+//   sys();
+//  }
+//  if (v1 == "close") {
+//   sys();
+//  }
+
+	if (op == "--fat32") {
+		cout <<
+		"[...] prepares file(s) (in terms of size) for transfering to/from FAT32 "
+		"file-system.""\n"
+		<< endl;
+		if (dir(inp)) {
+//		4,000,000,000
+			if (fsize(inp) < 4000000000) {
+				cout <<
+				"file(s) within" << quote(inp) << " are already prepared for FAT32."
+				<< endl;
+			}
+			cout <<
+			"[...] integrates file(s) within " << quote(inp) <<
+			" into one whole file.""\n"
+			"[] cat " << quote(inp) << "/* > summed_" << ts() << ".FAT32"
+			<< endl;
+		}
+//		4,000,000,000
+		if (fsize(inp) >= 4000000000) {
+			cout <<
+			"[...] splits large (more than 4GiB) file " << quote(inp) <<
+			" into smaller 1GB chunks.""\n"
+			"[] creates directory " << quote(t_dir) << "\n"
+			"[] split --bytes=1024m " << quote(inp) << " " << quote(t_dir)
+			<< endl;
+		}
+		cout << "[...] file (<4GB) is already prepared for FAT32." << endl;
+	}
+
+//		"[...] all file(s) considered as regular.""\n"
+//		"      to-be-binary one(s) need to get maintened manually:""\n"
+//		"      chmod 755 <bin-file>""\n"
+//		"[permission-mode]""\n"
+//		"directory       775""\n"
+//		"regular-file    664""\n"
+//		"application     755"
+
+

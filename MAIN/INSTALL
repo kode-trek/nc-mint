@@ -1,0 +1,179 @@
+#! /bin/bash
+
+# The MIT License (MIT)
+# Copyright (c) 2024 Emeer Adhamian (github.com/kode-trek)
+# https://raw.githubusercontent.com/kode-trek/nc-mint/main/LICENSE
+
+RED='\033[1;35m'
+GREEN='\033[1;36m'
+BLUE='\033[1;34m'
+YELLOW='\033[1;33m'
+NC='\033[0m' #No-Color
+
+printf "${GREEN}-- NC-MINT --${NC}""\n"
+
+if [[ "$1" == "--revert" ]]
+then
+ trap "exit" INT
+
+ sudo apt-get remove mkisofs -y
+ sudo apt-get remove p7zip-rar -y
+ sudo apt-get remove xsel -y
+ sudo apt-get remove tree -y
+ sudo apt-get remove vlc -y
+ sudo apt-get remove remmina remmina-plugin-vnc remmina-plugin-rdp -y
+ sudo apt-get remove gedit gedit-plugin-code-comment -y
+ sudo apt-get remove evince -y
+ sudo apt-get remove xchm -y
+ sudo apt-get remove dosbox -y
+ sudo apt-get remove wine -y
+ sudo apt-get remove mono-complete -y
+
+ sudo apt-get install xed -y
+ sudo apt-get install xreader -y
+
+ sudo apt-get install -f -y
+ sudo apt-get update -y
+
+ sudo rm -rf /usr/lib/nc-mint-bin/
+ sudo rm -rf /usr/lib/nc-mint-lib/
+ sudo rm /usr/bin/nc-mint
+
+ if [[ -e ~/nc-mint-asset ]]
+ then
+  printf "${BLUE}[OUT]${NC} ~/nc-mint-asset""\n"
+  printf "${YELLOW}[WARNING]${NC} file(s) found.""\n"
+ fi
+
+ read -n1 -r -p "press ANY-KEY to EXIT..." key
+ echo
+ exit
+fi
+
+lab51cc 1>/dev/null 2>/dev/null
+if [[ "$?" > 0 ]]
+then
+ echo "[REQUIREMENT] <lab51cc>"
+ echo "[DEVELOPMENT] <github.com/kode-trek>"
+ read -n1 -r -p "press ANY-KEY to EXIT..." key
+ echo
+ exit
+fi
+
+flg=0
+if [[ -e /usr/bin/nc-mint ]]
+then
+ printf "${BLUE}[OUT]${NC} /usr/bin/nc-mint""\n"
+ printf "${YELLOW}[WARNING]${NC} file(s) found.""\n"
+ flg=1
+fi
+if [[ -e /usr/lib/nc-mint-lib/ ]]
+then
+ printf "${BLUE}[OUT]${NC} /usr/lib/nc-mint-lib/""\n"
+ printf "${YELLOW}[WARNING]${NC} file(s) found.""\n"
+ flg=1
+fi
+if [[ -e /usr/bin/nc-mint-bin/ ]]
+then
+ printf "${BLUE}[OUT]${NC} /usr/bin/nc-mint-bin/""\n"
+ printf "${YELLOW}[WARNING]${NC} file(s) found.""\n"
+ flg=1
+fi
+if [[ $flg == 1 ]]
+then
+ read -p "RE-INSTALL? (Y/N): " confirm && [[ $confirm == [yY] ]] || exit 1
+fi
+
+trap "exit" INT
+
+sudo apt-get install -f -y
+sudo apt-get update -y
+sudo apt-get install software-properties-common -y
+
+sudo apt-get remove xed -y
+sudo apt-get remove xreader -y
+rm ~/.config/xed
+rm ~/.config/xreader
+
+sudo apt-get install gedit gedit-plugin-code-comment -y
+sudo apt-get install evince -y
+sudo apt-get install xchm -y
+sudo apt-get install vlc -y
+sudo apt-get install tree -y
+sudo apt-get install remmina remmina-plugin-vnc remmina-plugin-rdp -y
+sudo apt-get install mkisofs -y
+sudo apt-get install p7zip-rar -y
+sudo apt-get install xsel -y
+sudo apt-get install dosbox -y
+sudo apt-get install wine -y
+sudo apt-get install mono-complete -y
+
+sudo rm /usr/bin/nc-mint
+sudo rm -r /usr/lib/nc-mint-bin/
+sudo rm -r /usr/lib/nc-mint-lib/
+sudo mkdir /usr/lib/nc-mint-bin/
+sudo mkdir /usr/lib/nc-mint-lib/
+
+lab51cc lib/2dy/main_2dy.cc
+sudo mv main_2dy_* /usr/lib/nc-mint-bin/2dy
+
+lab51cc lib/abox/main_abox.cc
+sudo mv main_abox_* /usr/lib/nc-mint-bin/abox
+
+#lab51cc lib/cdup/main_cdup.cc
+#sudo mv main_cdup_* /usr/lib/nc-mint-bin/cdup
+
+lab51cc lib/xcb/main_xcb.cc
+sudo mv main_xcb_* /usr/lib/nc-mint-bin/xcb
+
+lab51cc lib/deb/main_deb.cc
+sudo mv main_deb_* /usr/lib/nc-mint-bin/deb
+
+lab51cc lib/dns/main_dns.cc
+sudo mv main_dns_* /usr/lib/nc-mint-bin/dns
+
+#lab51cc lib/ena/main_ena.cc
+#sudo mv main_ena_* /usr/lib/nc-mint-bin/ena
+
+lab51cc lib/ff/main_ff.cc
+sudo mv main_ff_* /usr/lib/nc-mint-bin/ff
+
+lab51cc lib/hi/main_hi.cc
+sudo mv main_hi_* /usr/lib/nc-mint-bin/hi
+
+#lab51cc lib/job/main_job.cc
+#sudo mv main_job_* /usr/lib/nc-mint-bin/job
+
+lab51cc lib/shh/main_shh.cc
+sudo mv main_shh_* /usr/lib/nc-mint-bin/shh
+
+lab51cc lib/snf/main_snf.cc
+sudo mv main_snf_* /usr/lib/nc-mint-bin/snf
+
+lab51cc lib/usb/main_usb.cc
+sudo mv main_usb_* /usr/lib/nc-mint-bin/usb
+
+#lab51cc lib/vbox/main_vbox.cc
+#sudo mv main_vbox_* /usr/lib/nc-mint-bin/vbox
+
+lab51cc lib/wifi/main_wifi.cc
+sudo mv main_wifi_* /usr/lib/nc-mint-bin/wifi
+
+lab51cc lib/zpr/main_zpr.cc
+sudo mv main_zpr_* /usr/lib/nc-mint-bin/zpr
+
+lab51cc lib/help.cc
+sudo mv help_* /usr/lib/nc-mint-bin/help
+
+lab51cc lib/menu.cc
+sudo mv menu_* /usr/lib/nc-mint-bin/menu
+
+lab51cc lib/intro.cc
+sudo mv intro_* /usr/lib/nc-mint-bin/intro
+
+sudo cp lib/nc-mint /usr/bin
+sudo chmod 755 /usr/bin/nc-mint
+sudo cp -rf lib/0-asset /usr/lib/nc-mint-lib/asset
+
+read -n1 -r -p "press ANY-KEY to EXIT..." key
+echo

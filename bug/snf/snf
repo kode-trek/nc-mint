@@ -1,0 +1,4 @@
+snf
+find . -type f -size -100M
+find ./*.mkv -type f -size -100M
+https://blog.liplex.de/grep-with-more-lines/

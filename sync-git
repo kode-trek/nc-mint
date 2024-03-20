@@ -1,0 +1,16 @@
+#! /bin/bash
+
+git config user.name "kode-trek"
+git config user.email "kode.trek@gmail.com"
+git config push.default "simple"
+
+git checkout --orphan latest_branch
+
+git add -A
+
+git commit -am "bug-fixin' and other minor adjustment(s)."
+
+git branch -D main
+git branch -m main
+
+git push -f origin main

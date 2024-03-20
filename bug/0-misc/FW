@@ -1,0 +1,14 @@
+- update genymotion-download-link
+  (location: lib/abox/proc_abox.hh)
+  (location: lib/abox/sim_abox.hh)
+- review all code-files on behalf of <ROOT> user
+- update virtualbox-download-link
+  (location: lib/vbox/proc_vbox.hh)
+  (location: lib/vbox/sim_vbox.hh)
+- add apt() for un-install as wel as install
+
+	string cmd7 = (string) "file --mime-type " + quote(inp);
+//	string cmd7 = (string) "file -b --mime-type " + quote(inp) +
+//	R"( | sed 's|/.*||')";
+----------------------------------------------------------------
+sudo mdosfs -F 32 -I /dev/sdb

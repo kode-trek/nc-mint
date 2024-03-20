@@ -1,0 +1,34 @@
+#include "proc_2dy.hpp"
+#include "sim_2dy.hpp"
+int main(int argc, char* argv[]) {
+	if ((string) argv[1] == "") {
+		cout <<
+		"-- 2dy T O D A Y --""\n"
+		"displays/sets clock (date and time).""\n"
+		"\n"
+		"nc-mate 2dy --help"
+		<< endl;
+		exit(0);
+	}
+	if ((string) argv[1] == "--help") {
+		cout <<
+		"-- 2dy T O D A Y --""\n"
+		"displays/sets clock (date and time).""\n"
+		"\n"
+		"[PATTERN] nc-mate 2dy --show""\n"
+		"displays clock.""\n"
+		"\n"
+		"[PATTERN] nc-mate 2dy --list""\n"
+		"displays list of time-zone(s).""\n"
+		"[UP | DOWN] traverse.""\n"
+		"[Q] quit.""\n"
+		"\n"
+		"[PATTERN] nc-mate 2dy --set <time-zone>""\n"
+		"sets clock."
+		<< endl;
+		exit(0);
+	}
+	if ((string) argv[1] == "--sim") {sim_2dy(argv[2], argv[3]); exit(0);}
+	proc_2dy(argv[1], argv[2]);
+}
+

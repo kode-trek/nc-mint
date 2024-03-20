@@ -1,0 +1,149 @@
+e-mail client
+VPN
+VPS
+mouse
+farsi-layout
+view-files-caja
+Mail Service
+https://generator.email/
+install x64 os on vm
+copy file from cd -- rip
+install persian font
+make clips using proshow -- alternative pptx
+brasero
+set ip on different nodes
+power point
+install printer
+
+Description: collection of components for providing a productive environment.
+ -establishes wifi connection.
+ -sets command-history to be cleared on closing terminal's session.
+ -clusters files into multiple groups of files with the same size.
+ -renames all files within a folder from 1 to N.
+ -splits a large file (> 4GiB) into smaller chunks to fit in FAT32.
+ -builds <.deb> package.
+ -searches for certain file(s)/folder(s) or certain phrase inside other file(s).
+ -displays text that has been saved in clipboard.
+ -changes transferred file(s) or folder(s) permission-modes to fit in ext4.
+ -mounts or un-mounts CD/DVD.
+ -accesses the media-storage on an external device connected via USB.
+ -extracts file(s) from different archive types: (g)zip, rar, 7z, tar-ball, ...
+ -produces PDF from a <.tex> document.
+ -manages a job scheduler
+ -provides emulators, virtual platforms, (v)lans, ...
+ -burns file(s) on USB, CD, DVD
+ -sets ip on different nodes
+
+misc
+  705  dig @resolver4.opendns.com myip.opendns.com +short
+  706  dig @resolver4.opendns.com myip.opendns.com +short 1>/dev/null
+  707  dig @resolver4.opendns.com myip.opendns.com +short 1>/dev/null 2>/dev/null
+  747  ifconfig -a
+  748  ip addr (ip a)
+  749  ip addr
+  750  ip a
+  751  hostname -I | awk '{print $1}'
+sudo apt install brasero
+ifconfig
+https://superuser.com/questions/8077/how-do-i-set-up-ssh-so-i-dont-have-to-type-my-password
+   26  gdebi vk_5.2.3-1_amd64.deb 
+   27  sudo apt-get install libgnome-keyring0
+  189  tree 0-git-conf/
+  190  tree 0-git-conf/ -a
+  337  ifconfig 
+  508  ping n=4 google.com
+  509  ping -c 4 google.com
+  674  history | grep configure
+  676  history | grep config
+  678  traceroute 69.194.115.238
+  679  sudo apt-get install traceroute
+  680  sudo dpkg --configure -a
+  681  sudo apt-get install traceroute
+  682  traceroute 69.194.115.238
+  683  traceroute 94.183.164.196
+  684  traceroute 165.22.248.132
+  685  geoiplookup 
+  686  sudo apt-get install geoiplookup
+  687  sudo apt-get install geoip
+  688  sudo apt-get install geoip-bin
+  689  geoiplookup 165.22.248.132
+  695  geoiplookup 165.22.248.132
+  696  geoiplookup 69.194.115.218
+  697  geoiplookup 100.90.177.207
+  704  curl ifconfig.me
+ 1451  scp archive/lab51cc/ -r 192.168.1.104:~/Desktop
+ 1452  ssh-keygen -f ~/.ssh/known_hosts -R 192.168.1.104
+ 1982  scp WIN7ULT.6in1.ENU.MAR2020.iso 192.168.1.104:~/Desktop
+ 1983  ssh-keygen -f "/home/qladee/.ssh/known_hosts" -R "192.168.1.104"
+ 1984  scp WIN7ULT.6in1.ENU.MAR2020.iso 192.168.1.104:~/Desktop
+ 1495  geoiplookup 165.22.75.168
+ 1502  geoiplookup 185.85.50.16
+ 1668  geoiplookup 109.93.169.233
+ 1669  geoiplookup 31.210.21.55
+ 1775  geoiplookup 120.208.100.46
+aptitude show bchunk
+ 1763  bchunk *.bin *.cue fifa2k1.iso
+ 1978  sudo apt install gparted
+ 1979  gparted
+ 1998  gparted
+sudo cp org.gnome.Vino.gschema.xml /usr/share/glib-2.0/schemas/
+sudo glib-compile-schemas /usr/share/glib-2.0/schemas/
+cat ~/.vnc/passwd
+ls .vnc
+set -x
+sudo apt-get install auditd
+auditctl -a task,always
+sudo auditctl -a task,always
+ausearch -i -sc execve
+sudo ausearch -i -sc execve
+du untitled\ folder/
+du
+diff q1 q2
+diff -i q1 q2
+comm -12 tmp2 tmp3
+comm -i -12 tmp2 tmp3
+comm -12 tmp2 tmp3
+MCEdit
+apt show mc
+mcedit 
+mc
+mcedit rm.cc 
+hostname -I
+sudo -i
+ls .xsession-errors 
+cat .xsession-errors 
+echo xfce4-session > ~/.xsession
+cat .xsession
+
+https://postmarkapp.com/
+https://www.ymlp.com/
+https://www.hiwaay.net/email-services/
+http://wiki.winnc.com/index.php?title=Version_History
+http://cd.textfiles.com/cdaction/cdaction47b/NEW/
+https://upload.wikimedia.org/wikipedia/commons/1/1b/Linux_Distribution_Timeline.svg
+https://blog.edmdesigner.com/send-email-from-linux-command-line/
+https://generator.email/
+https://superuser.com/questions/8077/how-do-i-set-up-ssh-so-i-dont-have-to-type-my-password/8110
+https://en.aptoide.com/
+https://superuser.com/questions/222912/how-can-i-log-all-process-launches-in-linux
+https://askubuntu.com/questions/155005/block-ping-from-a-specific-ip
+https://askubuntu.com/questions/472220/change-notification-daemon-on-14-04
+https://serverfault.com/questions/457340/how-to-log-the-ip-addresses-trying-to-connect-to-a-port
+https://linuxize.com/post/netcat-nc-command-with-examples/
+https://askubuntu.com/questions/42453/equivalent-text-editor-to-ms-dos-editor
+The Open CLI Framework
+https://www.google.com/search?client=firefox-b-d&q=windscrib
+https://www.tecmint.com/monitor-linux-commands-executed-by-system-users-in-real-time/
+https://www.digitalocean.com/community/tutorials/how-to-create-a-sudo-user-on-ubuntu-quickstart
+https://www.tecmint.com/clear-ram-memory-cache-buffer-and-swap-space-on-linux/
+https://www.makeuseof.com/install-ubuntu-ftp-server/
+https://stackoverflow.com/questions/43182879/using-wget-to-fake-browser
+https://askubuntu.com/questions/72663/how-to-make-wget-retry-download-if-speed-goes-below-certain-threshold
+https://vitux.com/how-to-create-an-iso-file-in-ubuntu/
+https://phoenixnap.com/kb/how-to-find-ip-address-linux
+https://linoxide.com/how-tos/how-to-create-cd-iso-image-from-linux/
+https://support.speedify.com/article/562-how-to-install-speedify-on-linux
+https://linuxconfig.org/how-to-check-my-ip-address-on-ubuntu-20-04-focal-fossa-linux
+https://ubuntuforums.org/showthread.php?t=780509
+https://askubuntu.com/questions/12917/how-to-send-mail-from-the-command-line
+https://itsfoss.com/linux-better-than-windows/

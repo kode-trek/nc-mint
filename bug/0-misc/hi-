@@ -1,0 +1,24 @@
+void sim_hi(void) {
+ /* variable(s)
+ [cmd] color-command
+ */
+ string cmd = color("blue", "[] ");
+ // op(s)
+ cout <<
+ cmd + "dig @resolver4.opendns.com myip.opendns.com +short""\n" +
+ cmd + "date""\n"
+ "\n""yet more details could be discovered manually.""\n" +
+ color("blue", "[os] ") + "lsb_release -a""\n" +
+ color("blue", "[kernel] ") + "uname -a""\n" +
+ color("blue", "[disk] ") + "df -h""\n" +
+ color("blue", "[usb] ") + "lsusb""\n" +
+ color("blue", "[cpu] ") + "cat /proc/cpuinfo""\n" +
+ color("blue", "[mem] ") + "cat /proc/meminfo""\n" +
+ color("blue", "[ram] ") + "free -m""\n" +
+ color("blue", "[net] ") + "ifconfig""\n" +
+ color("blue", "[hware] ") + "lshw""\n" +
+ color("blue", "[sound] ") + "aplay -l""\n" +
+ color("blue", "[pci] ") + "lspci"
+ << endl;
+}
+

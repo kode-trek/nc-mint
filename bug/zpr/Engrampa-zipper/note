@@ -1,0 +1,5 @@
+Engrampa
+doesnt save file-permission when zipping
+built archive doesnt get extracted in windows
+takes time to display double-archived (ex. tar.gz) content
+[ref img-1 img2 in Engrampa-folder https://mate-desktop.org/]

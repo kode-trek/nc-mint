@@ -1,0 +1,54 @@
+
+
+[3545] nc-mate/lib/ena
+[905] nc-mate/lib/ena/main_ena.cc
+[1463] nc-mate/lib/ena/proc_ena.hh
+[1177] nc-mate/lib/ena/sim_ena.hh
+
+[2559] nc-mate/lib/job
+[101] nc-mate/lib/job/job-1.sh
+[874] nc-mate/lib/job/main_job.cc
+[135] nc-mate/lib/job/nc-mate-job.desktop
+[437] nc-mate/lib/job/proc_job.hh
+[736] nc-mate/lib/job/q.cc
+[276] nc-mate/lib/job/sim_job.hh
+
+[136265] nc-mate/lib/usb
+[129430] nc-mate/lib/usb/1.png
+[2116] nc-mate/lib/usb/main_usb.cc
+[4471] nc-mate/lib/usb/proc_usb.hh
+[248] nc-mate/lib/usb/sim_usb.hh
+
+[9177] nc-mate/lib/wifi
+[5159] nc-mate/lib/wifi/con-wifi
+[1164] nc-mate/lib/wifi/con-wifi/forget.py
+[164] nc-mate/lib/wifi/con-wifi/func.py
+[213] nc-mate/lib/wifi/con-wifi/FW
+[109] nc-mate/lib/wifi/con-wifi/q1_disp.py
+[399] nc-mate/lib/wifi/con-wifi/q2_if.py
+[96] nc-mate/lib/wifi/con-wifi/q3_help.py
+[669] nc-mate/lib/wifi/con-wifi/q3_ssid.py
+[312] nc-mate/lib/wifi/con-wifi/q4_pass.py
+[1795] nc-mate/lib/wifi/con-wifi/wifi.cpp
+[238] nc-mate/lib/wifi/con-wifi/wyfy
+
+[179712] nc-mate/lib/wine
+[174462] nc-mate/lib/wine/un-install__wine_appz.pdf
+
+[505992] nc-mate/misc
+[216] nc-mate/misc/abox
+[457] nc-mate/misc/deb
+[286] nc-mate/misc/ff
+[90] nc-mate/misc/git
+[195160] nc-mate/misc/keep_alive
+[5650] nc-mate/misc/misc
+[255] nc-mate/misc/skr
+[109] nc-mate/misc/snf
+[31] nc-mate/misc/usb
+[1325] nc-mate/misc/vb-detector
+[301448] nc-mate/misc/VirtualBox_win7x64_14_02_2022_07_12_01.png
+[364] nc-mate/misc/wifi
+[482] nc-mate/misc/wine
+[119] nc-mate/misc/zpr
+[631] nc-mate/UNINSTALL
+

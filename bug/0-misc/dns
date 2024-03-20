@@ -1,0 +1,43 @@
+// check firefox setting has introduced a collection of secured DNS (cloudflare, google, ...)
+
+"DNS resolved to <shecan.ir> nameservers:"
+"185.51.200.2"
+"178.22.122.100"
+
+"resolves DNS to bypass sanctions on <.ir> domain."
+
+"sets nameservers in /etc/resolv.conf to:"
+"185.51.200.2"
+"178.22.122.100"
+
+"resets nameserver(s) back to default."
+"rolls back /etc/resolv.conf to its default:"
+"127.0.0.1"
+"127.0.0.53"
+
+void proc_hi(void) {
+ /* variable(s)
+ [cmd] color-command
+ [err] color-error/warning
+ */
+ string cmd = color("blue", "[] ");
+ string err = color("red", "[FAILED] ");
+ // command(s)
+ int e = 0;
+ string cmd1 = R"(dig @resolver4.opendns.com myip.opendns.com +short)";
+ string cmd2 = R"(hostname -I | awk '{print $1}')";
+ string cmd3 = "date";
+ // op(s)
+ disp("This is [public] ");
+ e = sys(cmd1 + " 2>/dev/null");
+ if (e) {
+  disp("[local] ");
+  sys(cmd2 + " 2>/dev/null");
+ }
+ e = sys(cmd3 + " 2>/dev/null");
+ if (e) cout << err + cmd3 << endl;
+ cout <<
+ "\n""yet more details could be discovered manually.""\n" +
+ color("blue", "[os] ") + "lsb_release -a""\n" +
+ color("blue", "[kernel] ") + "uname -a""\n" +
+ c

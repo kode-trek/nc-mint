@@ -1,0 +1,37 @@
+
+#include "proc_shh.hh"
+#include "sim_shh.hh"
+
+int main(int argc, char* argv[]) {
+ /* variable(s)
+ [v1] color-title
+ [v2] color-help
+ [v3] color-pattern
+ */
+ string v1 = color("blue", "-- S H ush H istory --");
+ string v2 = color("blue", " --help");
+ string v3 = color("blue", "[PATTERN] ");
+ // op(s)
+ if (str(argv[1]) == "") {
+  cout <<
+  v1 + "\n"
+  "turns off terminal command-history.""\n"
+  "nc-mate shh" + v2
+  << endl;
+  exit(0);
+ }
+ if (str(argv[1]) == "--help") {
+  cout <<
+  v3 + "nc-mate shh --clear""\n"
+  "clears command-history when terminal-session ends."
+  << endl;
+  exit(0);
+ }
+ if (str(argv[1]) == "--sim") {
+  sim_shh(argv[2]);
+  exit(0);
+ }
+ proc_shh(argv[1]);
+}
+
+

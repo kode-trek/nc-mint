@@ -1,0 +1,78 @@
+#! /bin/bash
+
+# 2dy
+if [[ "$1" == "2dy" ]]
+then
+	/usr/lib/nc-mate-bin/2dy "$2" "$3" "$4"
+	exit
+fi
+# abox
+if [[ "$1" == "abox" ]]
+then
+	/usr/lib/nc-mate-bin/abox "$2" "$3" "$4"
+	exit
+fi
+# app
+if [[ "$1" == "app" ]]
+then
+	/usr/lib/nc-mate-bin/app "$2" "$3"
+	exit
+fi
+# cdup
+if [[ "$1" == "cdup" ]]
+then
+	/usr/lib/nc-mate-bin/cdup "$2" "$3"
+	exit
+fi
+# dbox
+if [[ "$1" == "dbox" ]]
+then
+	/usr/lib/nc-mate-bin/dbox "$2" "$3"
+	exit
+fi
+# deb
+if [[ "$1" == "deb" ]]
+then
+	/usr/lib/nc-mate-bin/deb "$2" "$3" "$4"
+	exit
+fi
+# dns
+if [[ "$1" == "dns" ]]
+then
+	/usr/lib/nc-mate-bin/dns "$2" "$3"
+	exit
+fi
+# ena
+if [[ "$1" == "ena" ]]
+then
+	/usr/lib/nc-mate-bin/ena "$2" "$3" "$4"
+	exit
+fi
+# ff
+if [[ "$1" == "ff" ]]
+then
+	/usr/lib/nc-mate-bin/ff "$2" "$3" "$4"
+	exit
+fi
+# hi
+if [[ "$1" == "hi" ]]
+then
+	/usr/lib/nc-mate-bin/hi "$2"
+	exit
+fi
+# job
+if [[ "$1" == "job" ]]
+then
+	/usr/lib/nc-mate-bin/job "$2" "$3" "$4"
+	exit
+fi
+# shh
+if [[ "$1" == "shh" ]]
+then
+	/usr/lib/nc-mate-bin/shh "$2" "$3"
+	exit
+fi
+# snf
+if [[ "$1" == "snf" ]]
+then
+	/usr/l

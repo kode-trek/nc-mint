@@ -1,0 +1,27 @@
+#include "proc_ff.hpp"
+#include "sim_ff.hpp"
+int main(int argc, char* argv[]) {
+	if ((string) argv[1] == "") {
+		cout <<
+		"-- F ire F ox --""\n"
+		"upgrades firefox.""\n"
+		"\n"
+		"nc-mate ff --help"
+		<< endl;
+		exit(0);
+	}
+	if ((string) argv[1] == "--help") {
+		cout <<
+		"-- F ire F ox --""\n"
+		"upgrades firefox.""\n"
+		"\n"
+		"[PATTERN] nc-mate ff --upgrade [--reset]""\n"
+		"upgrades Mozilla FireFox for the latest stable version.""\n"
+		"\n"
+		"if [--reset] deletes all JSON databases (bookmarks, settings, ...)."
+		<< endl;
+		exit(0);
+	}
+	if ((string) argv[1] == "--sim") {sim_ff(argv[2], argv[3]); exit(0);}
+	proc_ff(argv[1], argv[2]);
+}

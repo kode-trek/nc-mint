@@ -1,0 +1,26 @@
+#include "proc_hi.hh"
+#include "sim_hi.hh"
+
+int main(int argc, char* argv[]) {
+ /* variable(s)
+ [v1] color-title
+ [v2] color-pattern
+ */
+ string v1 = color("blue", "-- H I --");
+ string v2 = color("blue", "[PATTERN] ");
+ // op(s)
+ if (str(argv[1]) == "--help") {
+  cout <<
+  v1 + "\n"
+  "displays properties of this computer (node).""\n" +
+  v2 + "nc-mate hi""\n"
+  "displays public-ip, clock, etc."
+  << endl;
+  exit(0);
+ }
+ if (str(argv[1]) == "--sim") {
+  sim_hi();
+  exit(0);
+ }
+ proc_hi();
+}

@@ -1,0 +1,5 @@
+bchunk <image.bin> <image.cue> <basename>
+bchunk NFS2SE.bin NFS2SE.cue NFS2SE
+
+sudo apt install bchunk
+https://manpages.ubuntu.com/manpages/bionic/man1/bchunk.1.html

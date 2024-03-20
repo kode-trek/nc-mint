@@ -1,0 +1,31 @@
+e-mail client
+VPN
+VPS
+mouse
+farsi-layout
+view-files-caja
+Mail Service
+https://generator.email/
+install x64 os on vm
+copy file from cd -- rip
+install persian font
+make clips using proshow -- alternative pptx
+brasero
+set ip on different nodes
+power point
+install printer
+
+Description: collection of components for providing a productive environment.
+ -establishes wifi connection.
+ -sets command-history to be cleared on closing terminal's session.
+ -clusters files into multiple groups of files with the same size.
+ -renames all files within a folder from 1 to N.
+ -splits a large file (> 4GiB) into smaller chunks to fit in FAT32.
+ -builds <.deb> package.
+ -searches for certain file(s)/folder(s) or certain phrase inside other file(s).
+ -displays text that has been saved in clipboard.
+ -changes transferred file(s) or folder(s) permission-modes to fit in ext4.
+ -mounts or un-mounts CD/DVD.
+ -accesses the media-storage on an external device connected via USB.
+ -extracts file(s) from different archive types: (g)zip, rar, 7z, tar-ball, ...
+ -produces PDF from a <.tex

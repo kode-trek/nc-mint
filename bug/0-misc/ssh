@@ -1,0 +1,4 @@
+lsb_release -a
+sudo apt update; sudo apt install openssh-server
+ifconfig
+

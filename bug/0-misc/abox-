@@ -1,0 +1,20 @@
+void sim_abox(string arg1, string arg2) {
+ /* variable(s)
+ [v1] operation
+ [v2] android-application-name
+ [v3] genymotion-bin-file
+ [v4] genymotion-download-link
+ [cmd] color-command
+ [err] color-error/warning
+ */
+ string cmd = color("blue", "[] ");
+ string err = color("yellow", "[WARNING] ");
+ //
+ string v1 = arg1;
+ string v2 = arg2;
+ string v3 = "genymotion-3.2.1-linux_x64.bin";
+ string v4 = "https://dl.genymotion.com/releases/genymotion-3.2.1/" + v3;
+ // command(s)
+ string cmd1 =
+ "wget -q -c --no-check-certificate --tries=0 --read-timeout=32 " + quote(v4);
+ string cm

@@ -1,0 +1,10 @@
+#! /bin/bash
+
+while [ 1 ]
+do
+ if [ `date +%D-%T` == "02/05/22-20:29:00" ]
+ then
+  bash -c "ls ~/Desktop > ~/Music/tmp"
+  exit
+ fi
+done

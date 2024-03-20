@@ -1,0 +1,66 @@
+[344] FW
+[2829] INSTALL
+
+
+[758] lib/0_asset/dns
+[708] lib/0_asset/dns/resolv.conf.0
+[50] lib/0_asset/dns/resolv.conf.1
+
+[3253] lib/cdup
+[953] lib/cdup/main_cdup.cc
+[1611] lib/cdup/proc_cdup.hh
+[689] lib/cdup/sim_cdup.hh
+
+[3224] lib/dbox
+[910] lib/dbox/main_dbox.cc
+
+[3545] lib/ena
+[905] lib/ena/main_ena.cc
+[1463] lib/ena/proc_ena.hh
+[1177] lib/ena/sim_ena.hh
+
+[2559] lib/job
+[101] lib/job/job-1.sh
+[874] lib/job/main_job.cc
+[135] lib/job/nc-mate-job.desktop
+[437] lib/job/proc_job.hh
+[736] lib/job/q.cc
+[276] lib/job/sim_job.hh
+
+[136265] lib/usb
+[129430] lib/usb/1.png
+
+
+[9177] lib/wifi
+[5159] lib/wifi/con-wifi
+[1164] lib/wifi/con-wifi/forget.py
+[164] lib/wifi/con-wifi/func.py
+[213] lib/wifi/con-wifi/FW
+[109] lib/wifi/con-wifi/q1_disp.py
+[399] lib/wifi/con-wifi/q2_if.py
+[96] lib/wifi/con-wifi/q3_help.py
+[669] lib/wifi/con-wifi/q3_ssid.py
+[312] lib/wifi/con-wifi/q4_pass.py
+[1795] lib/wifi/con-wifi/wifi.cpp
+[238] lib/wifi/con-wifi/wyfy
+
+[913] lib/wine/main_wine.cc
+[174462] lib/wine/un-install__wine_appz.pdf
+
+
+[505992] misc
+[216] misc/abox
+[457] misc/deb
+[286] misc/ff
+[90] misc/git
+[195160] misc/keep_alive
+[5650] misc/misc
+[255] misc/skr
+[109] misc/snf
+[31] misc/usb
+[1325] misc/vb-detector
+[301448] misc/VirtualBox_win7x64_14_02_2022_07_12_01.png
+[364] misc/wifi
+[482] misc/wine
+[119] misc/zpr
+[631] UNINSTALL

@@ -1,0 +1,9 @@
+#!/bin/bash
+sudo mount -t ntfs-3g -o permissions /dev/"sdb1" /media/2T/ 2>/dev/null
+sudo mount -t ntfs-3g -o permissions /dev/"sdc1" /media/3T/ 2>/dev/null
+
+echo /media/2T/
+ls /media/2T/ | grep -i "$1"
+echo ""
+echo /media/3T/
+ls /media/3T/ | grep -i "$1"

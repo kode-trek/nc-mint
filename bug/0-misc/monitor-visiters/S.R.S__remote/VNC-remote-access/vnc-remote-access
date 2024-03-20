@@ -1,0 +1,11 @@
+#! /bin/bash
+sudo apt-get update -y
+sudo apt-get install vino -y
+sudo cp /usr/share/applications/vino-server.desktop /etc/xdg/autostart/
+sudo cp org.gnome.Vino.gschema.xml /usr/share/glib-2.0/schemas/
+sudo glib-compile-schemas /usr/share/glib-2.0/schemas/
+#blockes IP from being scanned.
+#gsettings set org.gnome.Vino vnc-password $(echo -n 'mypword'|base64)
+#courtesy of GEORGE_SRI__TELEGRAM:@RooTGeorge__CPHONE:+40763704892
+sudo init 6
+#94.183.164.196

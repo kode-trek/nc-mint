@@ -1,0 +1,20 @@
+https://blaise.ca/blog/2009/06/14/solution-extract-exe-archive-with-7z-in-ubunu-9-04-fix-unsupported-method-error/
+https://blaise.ca/blog/2009/06/14/solution-extract-exe-archive-with-7z-in-ubunu-9-04-fix-unsupported-method-error/
+
+// if (v1 == "--fat") {
+//  cout <<
+//  "file(s) must not be larger than 4GB.""\n"
+//  "split large-file (> 4GB) into smaller chunks:""\n" +
+//  cmd + "nc-mate zpr -z <LARGE-FILE>""\n"
+//  // split --bytes=1024m FILE
+//  "integrates chunked files into one whole:""\n" +
+//  cmd + "nc-mate zpr -u <ZIP>"
+//  // cat DIR/* > summed_FILE
+//  << endl;
+// }
+//  "prepares file(s) (in terms of size) for transfering to/from FAT32 "
+//  "file-system.""\n"
+//  "if [dir] integrates chunked file(s) within <dir> into one whole.""\n"
+//  "if [file] splits large-<file> (> 4GB) into smaller chunks.""\n" +
+
+//  [OK] file is already prepared for transfering to FAT32

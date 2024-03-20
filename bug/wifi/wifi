@@ -1,0 +1,25 @@
+
+//		"[PATTERN] nc-mate wifi disp [--full]""\n"
+//		"enlists available wifi hotspot(s).""\n"
+//FIX:
+//forget -- user may choose multiple items separated with comma (,):
+//					ex: 1, 5, 6 (removes 1, 5 and 6)
+//forget -- user may choose a range of items designated by hyphen (-):
+//					ex: 1-3 (removes 1, 2 and 3)
+
+
+wifi
+nmcli d wifi list
+iw dev
+iw dev | awk '$1=="Interface"{print $2}'
+nmcli -t -f ssid dev wifi
+nmcli d wifi list
+nmcli -t -f UUID con show
+nmcli -t -f Name con show
+nmcli -t -f Name,UUID con show
+nmcli -t -f Name, UUID con show
+nmcli -t -f Name,UUID con show
+nmcli d wifi list
+   35  nmcli d disconnect `iw dev | awk '$1=="Interface"{print $2}'`
+   36  echo $?
+

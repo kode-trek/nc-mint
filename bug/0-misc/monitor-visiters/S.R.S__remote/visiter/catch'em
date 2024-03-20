@@ -1,0 +1,5 @@
+cat /var/log/syslog | grep 'SRC='
+sudo iptables -I INPUT -p tcp -m tcp --dport 5900 -m state --state NEW  -j LOG --log-level 1 --log-prefix "New Connection "
+notify-send test
+import -window root -delay 200 screenshot.png
+xviewer screenshot.png
